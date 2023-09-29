@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins" , sans-serif;
+    color: var(--black-color);
+
+}
+
+:root{
+    --primary-color: #f6f7fb;
+    --white-color: #fff;
+    --black-color: #121213;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: var(--primary-color);
+}
+body.dark {
+    --primary-color: #131313;
+    --white-color: #18191a;
+    --black-color: #fff;
+}
+
+.container{
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    /* border: 1px solid red; */
+    box-shadow: 0px 0px 20px -1px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.today-card{
+    width: 999px;
+    height: 300px;
+    /* border: 1px solid blue; */
+    border-radius: 20px;
+    position: relative;
+    display: block;
+
+}
+.mode-switch{
+    /* border: 1px solid red; */
+    width: 80px;
+    height: 30px;
+    color: var(--white-color);
+    background: var(--black-color);
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.mode-switch button{
+    background: none;
+    outline: none;
+    color: var(--white-color);
+    border: 1px solid var(--black-color);
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+}
+.mode-switch:hover  button:hover{
+    background: var(--black-color);
+    color: var(--white-color);
+    border: none;
+}
+
+.today-card-img-temp-box{
+    width: 800px;
+    height: 220px;
+    /* border: 1px solid red; */
+    margin: auto;
+    display: flex;
+    position: relative;
+    /* justify-content: center; */
+    align-items: center;
+    font-size: 22px;
+}
+.today-card-img-temp-box img{
+    /* border: 1px solid red ; */
+    width: 150px;
+    height: 150px;
+}
+.x{
+    margin-left: 50px;
+}
+.h1-div,.h2-div{
+    width: 150px;
+    height: 50px;
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.today-card-wind-humidity-box{
+    width: 800px;
+    height: 78px;
+    border-bottom: 1px solid var(--black-color);
+    /* border: 1px solid red; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.today-detail1,.today-detail2,.today-detail3,.today-detail4{
+    width: 150px;
+    height: 50px;
+    /* border: 2px solid pink; */
+    border-right: 1px solid var(--black-color);
+    text-align: center;
+}
+.today-detail5{
+    width: 150px;
+    height: 50px;
+    /* border: 2px solid pink; */
+    text-align: center;
+}
+
+.five-days-container{
+    width: 999px;
+    height: 150px;
+    /* border: 1px solid green; */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
+    transition: 0.5s;
+}
+.five-days-box{
+    /* border: 1px solid var(--black-color); */
+    border-radius: 20px;
+    height: 160px;
+}
+.day1img,.day2img,.day3img,.day4img,.day5img{
+    /* border: 1px solid red; */
+    width: 100px;
+    height: 100px;
+}
+@media only screen and (min-width:320px){
+    .container{
+        width: 300px;
+    }
+    .today-card{
+        width: 100%;
+    }
+    .today-card-img-temp-box{
+        font-size: 15px;
+    }
+    .today-card-img-temp-box img {
+        width: 130px;
+        height: 130px;
+    }
+    .x{
+        position: absolute;
+        width: 80px;
+        margin-left: 150px;
+    }
+    .today-card-wind-humidity-box{
+        width: 95%;
+        font-size: 11px;
+    }
+    .five-days-container{
+        width: 100%;
+        gap: 0;
+    }
+    .five-days-box{
+        width: 60px;
+        font-size: 12px;
+        
+    }
+    .day1img,.day2img,.day3img,.day4img,.day5img{
+        /* border: 1px solid red; */
+        width: 50px;
+        height: 50px;
+        
+    }
+}
+@media only screen and (min-width:425px){
+
+    .container{
+        width: 400px;
+    }
+    .today-card{
+        width: 100%;
+    }
+    .today-card-img-temp-box{
+        margin-left: 13px;
+    }
+    .today-card-wind-humidity-box{
+        width: 90%;
+        font-size: 13px;
+    }
+    .five-days-container{
+        width: 100%;
+        gap: 5px;
+
+    }
+    .day1img,.day2img,.day3img,.day4img,.day5img{
+        /* border: 1px solid red; */
+        width: 70px;
+        height: 70px;
+    }  
+}
+@media only screen and (min-width:768px) {
+    body{
+        width: 100%;
+        
+    }
+    .container{
+        width: 760px;
+    }
+    .today-card{
+        width: 100%;
+    }
+    .today-card-wind-humidity-box{
+        width: 90%;
+    }
+    .today-card-img-temp-box{
+        margin-left: 125px;
+    }
+    .five-days-container{
+        width: 100%;
+        gap: 50px;
+    }
+    .day1img,.day2img,.day3img,.day4img,.day5img{
+        /* border: 1px solid red; */
+        width: 90px;
+        height: 90px;
+    }
+}
+@media only screen and (min-width:1024px) {
+    body{
+        width: 100%;
+    
+    }
+    .container{
+        width: 900px;
+    }
+
+    .today-card-img-temp-box{
+        display: flex;
+        align-items: center;
+        margin-left: 100px;
+    }
+    .today-card-wind-humidity-box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        font-size: 15px;
+    
+    }
+    .five-days-container{
+        width: 100%;
+        gap: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .five-days-box{
+        width: 80px;
+        font-size: 14px;
+    }
+    .day1img,.day2img,.day3img,.day4img,.day5img{
+        /* border: 1px solid red; */
+        width: 100px;
+        height: 100px;
+    }
+}
+@media only screen and (min-width:1440px){
+
+    .container{
+        width: 60%;
+    }
+
+    .today-card-img-temp-box{
+        /* margin-left: 146px; */
+        font-size: 18px;
+        margin-left: 135px;
+    }
+    .today-card-wind-humidity-box{
+        width: 90%;
+        font-size: 16px;
+    }
+   
+    .five-days-container{
+        gap: 10%;
+        text-align: center;
+        display: flex;
+    }
+    .five-days-box{
+        width: 80px;
+        font-size: 17px;
+        text-align: center;
+        
+        
+    }
+    .day1img,.day2img,.day3img,.day4img,.day5img{
+        /* border: 1px solid red; */
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
